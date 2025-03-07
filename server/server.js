@@ -8,7 +8,7 @@ const employeeRoutes = require('./routes/employeeRoutes');
 
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://organization-sandeeps-projects-22864139.vercel.app/', 'https://organization-2ygqwdo5q-sandeeps-projects-22864139.vercel.app/','https://organization-blond-two.vercel.app/'], // Allow requests from frontend
+    origin: ['http://localhost:5173', 'https://organization-sandeeps-projects-22864139.vercel.app', 'https://organization-2ygqwdo5q-sandeeps-projects-22864139.vercel.app','https://organization-blond-two.vercel.app'], // Allow requests from frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
