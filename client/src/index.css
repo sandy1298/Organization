@@ -1,0 +1,86 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(239, 231, 222) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.modal-header .modal-title {
+  flex-grow: 1;
+  text-align: center;
+}
+.modal-footer {
+  border: none;
+  padding: 15px 30px 25px 30px;
+  justify-content: center;
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  padding: 25px 30px 0px 30px;
+  color: #f5751a;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 15px 30px 5px 30px;
+}
+
+.button_align{
+  text-align: left;
+}
+
+.button_custom{
+  background-color: blueviolet;
+  border: 1px solid white;
+  padding: 9px 10px;
+  color: white;
+  border-radius: 7px;
+  font-weight: bold;
+}
+.button_submit{
+  background-color: #f5751a;
+  border: 1px solid white;
+  padding: 10px 25px 10px 25px;
+  color: white;
+  border-radius: 7px;
+  font-weight: 700;
+}
+
+.button_submit:hover{
+  background-color: white;
+  border: 1px solid #f5751a;
+  color: #f5751a;
+}
+.button_custom:hover{
+  background-color: white;
+  border: 1px solid blueviolet;
+  color: blueviolet;
+}
+
+.buttons_align {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
