@@ -87,6 +87,19 @@ const AddEmployeeForm = ({ show, handleClose, employees }) => {
 
   const postAddStatus = useSelector(selectPostAddStatus);
 
+  const handleCloseAndReset = () => {
+    setFormData({
+      name: "",
+      designation: "",
+      dob: "",
+      experience: "",
+      reportingManager: "",
+      image: null,
+    });
+    setErrors({});
+    handleClose(); // Close the modal
+  };
+
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,17 +126,20 @@ const AddEmployeeForm = ({ show, handleClose, employees }) => {
         await dispatch(createPostAsync({ postDetails: employeeDetails }));
         await dispatch(fetchPostsAsync());
         toast.success("Employee added Successfully");
-        setTimeout(() => {
+       
           handleClose();
-        }, 1000);
+          handleCloseAndReset()
       }
     } catch (error) {
       toast.error("Failed to add employee.");
     }
   };
 
+
+
+
   return (
-    <Modal show={show} onHide={handleClose} centered>
+    <Modal show={show} onHide={handleCloseAndReset} centered>
       <Modal.Header closeButton>
         <Modal.Title>Add Employee</Modal.Title>
       </Modal.Header>

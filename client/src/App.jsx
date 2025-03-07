@@ -17,6 +17,7 @@ function App() {
     dispatch(fetchPostsAsync()).then(() => setLoading(false));
   }, [dispatch]);
 
+
   const handleClose = () => setShow(false);
 
   return (
